@@ -2,7 +2,7 @@
 
 // Save the userInput and check if it has a value. If there is no value, show alert
 // then invoke outputNumbs function
-const showResult = () => {
+const getResult = () => {
     let userInput = parseInt($("input#number").val());
     let userName = $("input#name").val();
     // Show alert when userInput is empty
@@ -28,10 +28,10 @@ const outputNumbs = (userInput, userName) => {
         } else if (i.toString().charAt(0) === "2" || i.toString().charAt(1) === "2") {
             results.push(` "Boop!"`);
         } else if (i.toString().charAt(0) === "3" || i.toString().charAt(1) === "3") {
-            if(!userName) {
-                results.push(` "I'm sorry. I'm afraid I can't do that!"`);
-            }
-            results.push(` "I'm sorry, ${userName}. I'm afraid I can't do that!"`);
+            (userName
+                ? (results.push(` "I'm sorry, ${userName}. I'm afraid I can't do that!"`))
+                :(results.push(` "I'm sorry. I'm afraid I can't do that!"`))
+            )
         } else {
             results.push(` ${i}`);
         }
@@ -39,13 +39,9 @@ const outputNumbs = (userInput, userName) => {
     return results;
 };
 
+// Clear the result field when use click another button.
 const clearCurrentResult = () => {
-    if($("button[value=reversed][checked=true]")){
-        results = [];
-    }
-    if($("button[value=normal][checked=true]")){
-        results = [];
-    }
+    ($("button[value=reversed][checked=true]") || $("button[value=normal][checked=true]")) && (results = [])
 }
 
 // User Interface logic
@@ -54,7 +50,7 @@ $(document).ready(() => {
     $("button[value=normal]").click(event => {
         event.preventDefault();
         clearCurrentResult();
-        showResult();
+        getResult();
         $("#result").text(results);
     });
 
@@ -62,7 +58,7 @@ $(document).ready(() => {
     $("button[value=reversed]").click(event => {
         event.preventDefault();
         clearCurrentResult();
-        showResult();
+        getResult();
         $("#result").text(results.reverse());
     });
 });
