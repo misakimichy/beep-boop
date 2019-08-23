@@ -12,7 +12,7 @@ const showResult = () => {
     }
     outputNumbs(userInput);
     $(".well").show();
-}
+};
 
 let results = [];
 // function takes userInput and returns the right message depends on the condition
@@ -29,7 +29,7 @@ const outputNumbs = userInput => {
         }
     }
     return results;
-}
+};
 
 
 // User Interface logic
@@ -45,6 +45,9 @@ $(document).ready(() => {
     $("button[value=reversed]").click(event => {
         event.preventDefault();
         showResult();
-        $("#result").text(results.reverse());
+        // If it's normal result is already shown, clear the well and show the reverse numbers.
+        if($(".well").show()){
+            $("#result").text(results.reverse());
+        }
     });
 });
