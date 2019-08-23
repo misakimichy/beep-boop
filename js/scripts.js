@@ -1,4 +1,19 @@
 // Business logic
+
+// Save the userInput and check if it has a value. If there is no value, show alert
+// then invoke outputNumbs function
+const showResult = () => {
+    let userInput = parseInt($("input").val());
+    // Show alert when userInput is empty
+    if(!userInput) {
+        alert("Please input numbers!");
+        $(".well").hide();
+        return;
+    }
+    outputNumbs(userInput);
+    $(".well").show();
+}
+
 let results = [];
 // function takes userInput and returns the right message depends on the condition
 const outputNumbs = userInput => {
@@ -16,14 +31,20 @@ const outputNumbs = userInput => {
     return results;
 }
 
-// User Interface logic
-$(document).ready(function(){
-    $("form").submit(function(event){
-        event.preventDefault();
-        let userInput = parseInt($("input").val());
-        outputNumbs(userInput);
 
-        $(".well").show();
+// User Interface logic
+$(document).ready(() => {
+    // For "Beep Boop" numbers button
+    $("button[value=normal]").click(event => {
+        event.preventDefault();
+        showResult();
         $("#result").text(results);
+    });
+
+    // For reversed "Beep Boop" numbers button
+    $("button[value=reversed]").click(event => {
+        event.preventDefault();
+        showResult();
+        $("#result").text(results.reverse());
     });
 });
