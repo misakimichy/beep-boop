@@ -27,8 +27,8 @@ This project should be created based on BDD and the separation logic of Business
 Here is the individual behaviors with input/output examples.
 
 - **Spec**: The program returns an error message when user input except numbers
-    - **Input**: 'Hello'
-    - **Output**: 'Please enter numbers!'
+    - **Input**: ''
+    - **Output**: 'Please input integers!'
 
 - **Spec**: The program returns a range of numbers from 0 to the users inputted number
     - **Input**: '4'

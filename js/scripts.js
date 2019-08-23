@@ -5,7 +5,7 @@
 const showResult = () => {
     let userInput = parseInt($("input").val());
     // Show alert when userInput is empty
-    if(!userInput) {
+    if(!userInput || userInput < 0 || !userInput.isInteger()) {
         $(".modal").modal();
         $("#close").click(() => {
             $(".modal").modal('hide');
