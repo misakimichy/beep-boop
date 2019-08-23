@@ -39,7 +39,7 @@ Here is the individual behaviors with input/output examples.
 
 - **Spec**: The program returns a range of numbers from 0 and returns a message when it contains a 3
     - **Input**: '4'
-    - **Output**: '0, 1, 2,  "I'm sorry. I'm afraid I can't do that.", 4'
+    - **Output**: '0, 1, 2,  "I'm sorry, Dave. I'm afraid I can't do that.", 4'
 
 - **Spec**: The program returns an error message when user input except numbers
     - **Input**: 'Hello'
