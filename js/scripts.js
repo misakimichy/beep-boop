@@ -5,11 +5,12 @@
 const showResult = () => {
     let userInput = parseInt($("input").val());
     // Show alert when userInput is empty
-    if(!userInput || userInput < 0 || !userInput.isInteger()) {
+    if(!userInput || userInput < 0) {
         $(".modal").modal();
         $("#close").click(() => {
             $(".modal").modal('hide');
         });
+        $("input").val('');
         $(".well").hide();
         return;
     }
@@ -34,19 +35,24 @@ const outputNumbs = userInput => {
     return results;
 };
 
-
 // User Interface logic
 $(document).ready(() => {
     // For "Beep Boop" numbers button, use .one method to disable multiple calls
-    $("button[value=normal]").one('click', event => {
+    $("button[value=normal]").click(event => {
         event.preventDefault();
+        if($("button[value=reversed][checked=true]")){
+            results = [];
+        }
         showResult();
         $("#result").text(results);
     });
 
     // For reversed "Beep Boop" numbers button, use .one method to disable multiple calls
-    $("button[value=reversed]").one('click', event => {
+    $("button[value=reversed]").click(event => {
         event.preventDefault();
+        if($("button[value=normal][checked=true]")){
+            results = [];
+        }
         showResult();
         $("#result").text(results.reverse());
     });
