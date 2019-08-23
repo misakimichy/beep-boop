@@ -1,6 +1,6 @@
 # _Roman Numerals_
 
-#### _Given a task to build a Beep Boop application, 8/23/2019_
+#### _week 3 solo project: a Beep Boop application, 8/23/2019_
 
 ## Description
 Build a Beep Boop application (using HTML, CSS, JavaScript and jQuery)
@@ -19,31 +19,36 @@ These exceptions are written from least to most important. The first exception s
 
 A user should be able to enter a new number and see new results over and over again.
 
-### Website should have:
+## Website should have:
+This project should be created based on BDD and the separation logic of Business logic and User Interface logic.
 
-**Specs**
+###Specs
 
 Here is the individual behaviors with input/output examples.
-
-- **Spec**: The program returns a range of numbers from 0 to the users inputted number
-    - **Input**: '4'
-    - **Output**: '0, 1, 2, 3, 4'
-
-- **Spec**: The program returns a range of numbers from 0 and returns "Beep!" when it contains a 1
-    - **Input**: '4'
-    - **Output**: '0, "Beep!", 2, 3, 4'
-
-- **Spec**: The program returns a range of numbers from 0 and returns "Boop!" when it contains a 2
-    - **Input**: '4'
-    - **Output**: '0, 1, "Boop", 3, 4'
-
-- **Spec**: The program returns a range of numbers from 0 and returns a message when it contains a 3
-    - **Input**: '4'
-    - **Output**: '0, 1, 2,  "I'm sorry, Dave. I'm afraid I can't do that.", 4'
 
 - **Spec**: The program returns an error message when user input except numbers
     - **Input**: 'Hello'
     - **Output**: 'Please enter numbers!'
+
+- **Spec**: The program returns a range of numbers from 0 to the users inputted number
+    - **Input**: '4'
+    - **Output**: `0, 1, 2, 3, 4`
+
+- **Spec**: The program returns a range of numbers from 0 and returns "Beep!" when it contains a 1
+    - **Input**: '4'
+    - **Output**: `0, "Beep!", 2, 3, 4`
+
+- **Spec**: The program returns a range of numbers from 0 and returns "Boop!" when it contains a 2
+    - **Input**: '4'
+    - **Output**: `0, "Beep!", "Boop", 3, 4`
+
+- **Spec**: The program returns a range of numbers from 0 and returns a message when it contains a 3
+    - **Input**: '4'
+    - **Output**: `0, "Beep!", "Boop", "I'm sorry, Dave. I'm afraid I can't do that.", 4`
+
+- **Spec**: The program returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the first digit
+    - **Input**: '13'
+    - **Output**: `0, "Beep!", "Boop", "I'm sorry, Dave. I'm afraid I can't do that.", ..."Beep!"`
 
 
 ## Setup/Installation Requirements

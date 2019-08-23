@@ -2,17 +2,15 @@
 let results = [];
 // function takes userInput and add condition
 const outputNumbs = userInput => {
+    if(userInput !== Number){
+        alert("Please input integers!");
+    }
     for(let i = 0; i <= userInput; i++){
-        if(typeof i !== "number"){
-            alert("Please input numbers!");
-        } else if (i.toString().charAt(0) === "1") {
-            console.log("includes one");
+        if (i.toString().charAt(0) === "1") {
             results.push("Beep!");
         } else if (i.toString().charAt(0) === "2") {
-            console.log("includes two");
             results.push("Boop!");
         } else if (i.toString().charAt(0) === "3") {
-            console.log("includes three");
             results.push("I'm sorry Dave, I'm afraid I can't do that!");
         } else {
             results.push(i);
@@ -30,5 +28,5 @@ $(document).ready(function(){
 
         console.log("Result", showResult);
         $(".well").show();
-    })
+    });
 });
