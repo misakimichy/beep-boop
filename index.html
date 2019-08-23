@@ -9,6 +9,7 @@
     <!-- Prevent the favicon error on console -->
     <link rel="shortcut icon" href="#">
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
     <title>Beep-Boop</title>
 </head>
@@ -18,9 +19,22 @@
         <form class="form-group">
             <p>Please enter numbers. We'll translate into "Beep Boop" numbers.</p>
             <input type="number">
-            <button type="submit" class="btn btn-info" value="normal">See "Beep Boop" numbers</button>
-            <button type="submit" class="btn btn-info" value="reversed">See reversed "Beep Boop" numbers</button>
+            <button type="submit" class="btn btn-info" value="normal">"Beep Boop" numbers</button>
+            <button type="submit" class="btn btn-info" value="reversed">Reversed "Beep Boop" numbers</button>
         </form>
+        <!-- modal -->
+        <div class="modal fade" role="dialog">
+            <div class="modal-dialog" role="dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p>Please input numbers!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" id="close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="well">
         <p id="result"></p>
         </div>

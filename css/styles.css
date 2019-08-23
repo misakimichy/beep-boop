@@ -11,11 +11,15 @@ input,
 .btn {
     display: block;
     margin: 20px auto;
-    font-size: 20px;
+    font-size: 1em;
 }
 
 .btn {
-    width: 35%;
+    min-width: 350px;
+}
+
+.modal {
+    margin-top: 30%;
 }
 
 input {
