@@ -46,10 +46,13 @@ Here is the individual behaviors with input/output examples.
     - **Input**: '4'
     - **Output**: `0, "Beep!", "Boop", "I'm sorry, Dave. I'm afraid I can't do that.", 4`
 
-- **Spec**: The program returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the first digit
+- **Spec**: When it's more than one digits and contains 1, 2 or 3, it returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the first digit
     - **Input**: '13'
     - **Output**: `0, "Beep!", "Boop", "I'm sorry, Dave. I'm afraid I can't do that.", ..."Beep!"`
 
+- **Spec**: When it's more than one digits and second or third digits contains 1, 2 or 3, it returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the second or third digit.
+    - **Input**: '41'
+    - **Output**: `0, "Beep!", "Boop", ..., 40, "Beep!"`
 
 ## Setup/Installation Requirements
 * Clone this repo:
