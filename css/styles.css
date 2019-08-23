@@ -1,6 +1,17 @@
+:root {
+    --black: #242423;
+    --hover-black: #333533;
+    --platinum: #e8eddf;
+    --light-gray: #cfdbd5;
+    --yellow: #f5cb5c;
+    --hover-yellow: #ffe08d;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    background-color: var(--platinum);
+    color: var(--black);
 }
 
 h1, h2, p {
@@ -18,9 +29,24 @@ input,
     font-size: 1em;
 }
 
+input {
+    color:#242423;
+}
+
 .btn {
     min-width: 350px;
     margin-top: 20px;
+    background-color: var(--yellow);
+    color: var(--black);
+    box-shadow: 0 6px #deb750;
+    outline: none !important;
+    border-radius: 10px;
+}
+.btn:hover {
+    color: var(--hover-black);
+    box-shadow: 0 3px #deb750;
+    position: relative;
+    top: 2px;
 }
 
 .modal {
