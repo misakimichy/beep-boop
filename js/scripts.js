@@ -35,14 +35,21 @@ const outputNumbs = userInput => {
     return results;
 };
 
+const clearCurrentResult = () => {
+    if($("button[value=reversed][checked=true]")){
+        results = [];
+    }
+    if($("button[value=normal][checked=true]")){
+        results = [];
+    }
+}
+
 // User Interface logic
 $(document).ready(() => {
     // For "Beep Boop" numbers button, use .one method to disable multiple calls
     $("button[value=normal]").click(event => {
         event.preventDefault();
-        if($("button[value=reversed][checked=true]")){
-            results = [];
-        }
+        clearCurrentResult();
         showResult();
         $("#result").text(results);
     });
@@ -50,9 +57,7 @@ $(document).ready(() => {
     // For reversed "Beep Boop" numbers button, use .one method to disable multiple calls
     $("button[value=reversed]").click(event => {
         event.preventDefault();
-        if($("button[value=normal][checked=true]")){
-            results = [];
-        }
+        clearCurrentResult();
         showResult();
         $("#result").text(results.reverse());
     });
