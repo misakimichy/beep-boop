@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h1, p {
+    text-align: center;
+}
+
+input, 
+.btn {
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+input {
+    height: 40px;
+}
+
+.well {
+    display: none;
+}
