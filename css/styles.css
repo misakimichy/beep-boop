@@ -3,19 +3,24 @@ body {
     font-size: 20px;
 }
 
-h1, p {
+h1, h2, p {
     text-align: center;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 input, 
 .btn {
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     font-size: 1em;
 }
 
 .btn {
     min-width: 350px;
+    margin-top: 20px;
 }
 
 .modal {

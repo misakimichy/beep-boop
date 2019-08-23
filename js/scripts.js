@@ -3,7 +3,8 @@
 // Save the userInput and check if it has a value. If there is no value, show alert
 // then invoke outputNumbs function
 const showResult = () => {
-    let userInput = parseInt($("input").val());
+    let userInput = parseInt($("input#number").val());
+    let userName = $("input#name").val();
     // Show alert when userInput is empty
     if(!userInput || userInput < 0) {
         $(".modal").modal();
@@ -14,20 +15,23 @@ const showResult = () => {
         $(".well").hide();
         return;
     }
-    outputNumbs(userInput);
+    outputNumbs(userInput, userName);
     $(".well").show();
 };
 
 // function takes userInput and returns the right message depends on the condition
 let results = [];
-const outputNumbs = userInput => {
+const outputNumbs = (userInput, userName) => {
     for(let i = 0; i <= userInput; i++){
         if (i.toString().charAt(0) === "1" || i.toString().charAt(1) === "1") {
             results.push(` "Beep!"`);
         } else if (i.toString().charAt(0) === "2" || i.toString().charAt(1) === "2") {
             results.push(` "Boop!"`);
         } else if (i.toString().charAt(0) === "3" || i.toString().charAt(1) === "3") {
-            results.push(` "I'm sorry Dave, I'm afraid I can't do that!"`);
+            if(!userName) {
+                results.push(` "I'm sorry. I'm afraid I can't do that!"`);
+            }
+            results.push(` "I'm sorry, ${userName}. I'm afraid I can't do that!"`);
         } else {
             results.push(` ${i}`);
         }
