@@ -14,8 +14,8 @@ const showResult = () => {
     $(".well").show();
 };
 
-let results = [];
 // function takes userInput and returns the right message depends on the condition
+let results = [];
 const outputNumbs = userInput => {
     for(let i = 0; i <= userInput; i++){
         if (i.toString().charAt(0) === "1" || i.toString().charAt(1) === "1") {
@@ -34,20 +34,17 @@ const outputNumbs = userInput => {
 
 // User Interface logic
 $(document).ready(() => {
-    // For "Beep Boop" numbers button
-    $("button[value=normal]").click(event => {
+    // For "Beep Boop" numbers button, use .one method to disable multiple calls
+    $("button[value=normal]").one('click', event => {
         event.preventDefault();
         showResult();
         $("#result").text(results);
     });
 
-    // For reversed "Beep Boop" numbers button
-    $("button[value=reversed]").click(event => {
+    // For reversed "Beep Boop" numbers button, use .one method to disable multiple calls
+    $("button[value=reversed]").one('click', event => {
         event.preventDefault();
         showResult();
-        // If it's normal result is already shown, clear the well and show the reverse numbers.
-        if($(".well").show()){
-            $("#result").text(results.reverse());
-        }
+        $("#result").text(results.reverse());
     });
 });

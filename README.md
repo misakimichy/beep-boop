@@ -22,7 +22,7 @@ A user should be able to enter a new number and see new results over and over ag
 ## Website should have:
 This project should be created based on BDD and the separation logic of Business logic and User Interface logic.
 
-###Specs
+### Specs
 
 Here is the individual behaviors with input/output examples.
 
@@ -53,6 +53,11 @@ Here is the individual behaviors with input/output examples.
 - **Spec**: When it's more than one digits and second or third digits contains 1, 2 or 3, it returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the second or third digit.
     - **Input**: '41'
     - **Output**: `0, "Beep!", "Boop", ..., 40, "Beep!"`
+
+- **Spec**: When user click a reversed button, the order would be reversed.
+    - **Input**: '4'
+    - **Output**: `4, "I'm sorry, Dave. I'm afraid I can't do that.", "Boop", "Beep", 0`
+
 
 ## Setup/Installation Requirements
 * Clone this repo:
