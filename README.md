@@ -19,6 +19,8 @@ These exceptions are written from least to most important. The first exception s
 
 A user should be able to enter a new number and see new results over and over again.
 
+![screenshot of Beep Boop](img/screenshot.png)
+
 ## Website should have:
 This project should be created based on BDD and the separation logic of Business logic and User Interface logic.
 
@@ -34,23 +36,15 @@ Here is the individual behaviors with input/output examples.
     - **Input**: '4'
     - **Output**: `0, 1, 2, 3, 4`
 
-- **Spec**: The program returns a range of numbers from 0 and returns "Beep!" when it contains a 1
-    - **Input**: '4'
-    - **Output**: `0, "Beep!", 2, 3, 4`
-
-- **Spec**: The program returns a range of numbers from 0 and returns "Boop!" when it contains a 2
-    - **Input**: '4'
-    - **Output**: `0, "Beep!", "Boop", 3, 4`
-
-- **Spec**: The program returns a range of numbers from 0 and returns a message when it contains a 3
+- **Spec**: The program returns a range of numbers from 0 and returns "Beep!" when it contains a 1, returns "Boop!" when it contains a 2, and returns a message when it contains a 3.
     - **Input**: '4'
     - **Output**: `0, "Beep!", "Boop", "I'm sorry, Dave. I'm afraid I can't do that.", 4`
 
-- **Spec**: When it's more than one digits and contains 1, 2 or 3, it returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the first digit
+- **Spec**: When it's more than one digits and contains 1, 2 or 3 as a first digit, it returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the first digit
     - **Input**: '13'
     - **Output**: `0, "Beep!", "Boop", "I'm sorry, Dave. I'm afraid I can't do that.", ..."Beep!"`
 
-- **Spec**: When it's more than one digits and second or third digits contains 1, 2 or 3, it returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the second or third digit.
+- **Spec**: When it's more than one digits and second or third digit contains 1, 2 or 3, it returns a range of numbers from 0 and returns "Beep!", "Boop!" or a message based on the second or third digit.
     - **Input**: '41'
     - **Output**: `0, "Beep!", "Boop", ..., 40, "Beep!"`
 
