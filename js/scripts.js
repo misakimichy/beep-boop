@@ -15,13 +15,14 @@ const getResult = () => {
         $(".well").hide();
         return;
     }
-    outputNumbs(userInput, userName);
+    let results = outputNumbs(userInput, userName);
     $(".well").show();
+    return results;
 };
 
 // function takes userInput and returns the right message depends on the condition
-let results = [];
 const outputNumbs = (userInput, userName) => {
+    let results = [];
     for(let i = 0; i <= userInput; i++){
         if (i.toString().charAt(0) === "1" || i.toString().charAt(1) === "1") {
             results.push(` "Beep!"`);
@@ -50,7 +51,7 @@ $(document).ready(() => {
     $("button[value=normal]").click(event => {
         event.preventDefault();
         clearCurrentResult();
-        getResult();
+        let results = getResult();
         $("#result").text(results);
     });
 
@@ -58,7 +59,7 @@ $(document).ready(() => {
     $("button[value=reversed]").click(event => {
         event.preventDefault();
         clearCurrentResult();
-        getResult();
+        let results = getResult();
         $("#result").text(results.reverse());
     });
 });
