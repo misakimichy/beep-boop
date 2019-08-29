@@ -24,11 +24,11 @@ const getResult = () => {
 const outputNumbs = (userInput, userName) => {
     let results = [];
     for(let i = 0; i <= userInput; i++){
-        if (i.toString().charAt(0) === "1" || i.toString().charAt(1) === "1") {
+        if (i.toString().includes(1) === true) {
             results.push(` "Beep!"`);
-        } else if (i.toString().charAt(0) === "2" || i.toString().charAt(1) === "2") {
+        } else if (i.toString().includes(2) === true) {
             results.push(` "Boop!"`);
-        } else if (i.toString().charAt(0) === "3" || i.toString().charAt(1) === "3") {
+        } else if (i.toString().includes(3) === true) {
             (userName
                 ? (results.push(` "I'm sorry, ${userName}. I'm afraid I can't do that!"`))
                 :(results.push(` "I'm sorry. I'm afraid I can't do that!"`))
